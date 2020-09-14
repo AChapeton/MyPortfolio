@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryColor: #1a1715;
+  --blueColor: #086788;
+  --lightBlueColor: #51d2dc;
+  --whiteColor: #bbbfbb;
+  --grayColor: #383738;
+
+  --fontFamily: 'Raleway', sans-serif;
+}
+
+.home {
+  height: 100vh;
+  width: 100%;
+  background: url('/assets/emile-perron-xrVDYZRGdw4-unsplash.jpg') center center /
+    cover no-repeat;
+}
+
+.wrapper {
+  padding: 0 1.5rem;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(26, 23, 21, 0.9);
+  height: 100vh;
+  width: 100%;
+  color: var(--whiteColor);
+  font-family: var(--fontFamily);
+  font-size: 1.1rem;
+}
+
+.home-content > p {
+  margin: 0.5rem 0;
+}
+
+.home-my-name {
+  color: var(--blueColor);
+  font-weight: 600;
+}
+
+.home-description {
+  animation-name: fade-in-top;
+  animation-duration: 0.5s;
+}
+
+.home-social {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.home-social-icon > img {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  color: var(--whiteColor);
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    padding: 0 5rem;
+  }
+
+  .home-content {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .wrapper {
+    padding: 0;
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+@-webkit-keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

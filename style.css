@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--fontFamily);
-  background-color: var(--primaryColor);
 }
 
 .none {
@@ -75,6 +74,7 @@
 .portfolio {
   font-family: var(--fontFamily);
   color: var(--whiteColor);
+  background-color: var(--primaryColor);
 }
 
 .portfolio-content > h1 {
@@ -117,7 +117,7 @@
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(187, 191, 187, 0.5),
+    rgba(187, 191, 187, 0.75),
     var(--blueColor)
   );
   z-index: 2;
@@ -145,6 +145,8 @@
   opacity: 0;
   transform: translateY(30px);
   transition: 0.5s all;
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio-card:hover .portfolio-card-content {
@@ -152,14 +154,24 @@
   transform: translateY(0px);
 }
 
+.portfolio-card-content h3 {
+  text-align: center;
+}
+
+.portfolio-card-content p {
+  margin-bottom: 8rem;
+  margin-top: 1rem;
+}
+
 .portfolio-card-content h3,
 .portfolio-card-content p {
-  margin-bottom: 0.5rem;
+  color: var(--primaryColor);
+  font-weight: 600;
 }
 
 .portfolio-card .portfolio-card-content .button {
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 0.5rem;
   border: none;
   border-radius: 5px;
   background: var(--whiteColor);
@@ -168,7 +180,14 @@
   font-weight: 600;
   cursor: pointer;
   transition: 0.4s ease-in-out;
-  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.portfolio-card .portfolio-card-content .second_action {
+  border: 1px solid var(--primaryColor);
+  background-color: transparent;
+  color: var(--whiteColor);
 }
 
 .portfolio-card .portfolio-card-content .button:hover {
@@ -179,6 +198,7 @@
 
 .about-me {
   color: var(--whiteColor);
+  background-color: var(--primaryColor);
 }
 
 .about-me-content {
@@ -205,6 +225,7 @@
 
 .skills {
   color: var(--whiteColor);
+  background-color: var(--primaryColor);
 }
 
 .skills-content > h2 {
@@ -220,7 +241,26 @@
 
 .skills-tooltip {
   width: 50px;
-  width: 50px;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted var(--whiteColor);
+}
+
+.skills-tooltip .skills-tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--whiteColor);
+  color: var(--primaryColor);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.skills-tooltip:hover .skills-tooltiptext {
+  visibility: visible;
 }
 
 @media only screen and (min-width: 768px) {
